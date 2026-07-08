@@ -4,12 +4,12 @@ An AI-powered news chat assistant built with **Python**, **Flask**, the
 **OpenAI API (or Anthropic/Claude API)**, and **NewsAPI**.
 
 Search the news, then chat with an AI that can **summarize**, **explain**,
-**compare**, and **detect the sentiment** of articles — or just answer your
+**compare**, and **detect the sentiment** of articles - or just answer your
 questions about current events, right inside a modern chat interface.
 
 This README is written for someone who has **never run a Python project
 before** and has only installed **Visual Studio Code**. Follow it top to
-bottom and you will have the app running locally. Take your time — every
+bottom and you will have the app running locally. Take your time - every
 step is explained, including what to type and what you should see.
 
 ---
@@ -18,17 +18,17 @@ step is explained, including what to type and what you should see.
 
 1. [What this app does](#1-what-this-app-does)
 2. [Project folder structure](#2-project-folder-structure)
-3. [Step 1 — Install Python](#step-1--install-python)
-4. [Step 2 — Install Git (optional but recommended)](#step-2--install-git-optional-but-recommended)
-5. [Step 3 — Get the project into VS Code](#step-3--get-the-project-into-vs-code)
-6. [Step 4 — Open a terminal inside VS Code](#step-4--open-a-terminal-inside-vs-code)
-7. [Step 5 — Create a virtual environment](#step-5--create-a-virtual-environment)
-8. [Step 6 — Activate the virtual environment](#step-6--activate-the-virtual-environment)
-9. [Step 7 — Install the project dependencies](#step-7--install-the-project-dependencies)
-10. [Step 8 — Get your API keys](#step-8--get-your-api-keys)
-11. [Step 9 — Create your `.env` file](#step-9--create-your-env-file)
-12. [Step 10 — Run the application](#step-10--run-the-application)
-13. [Step 11 — Use the app](#step-11--use-the-app)
+3. [Step 1 - Install Python](#step-1--install-python)
+4. [Step 2 - Install Git (optional but recommended)](#step-2--install-git-optional-but-recommended)
+5. [Step 3 - Get the project into VS Code](#step-3--get-the-project-into-vs-code)
+6. [Step 4 - Open a terminal inside VS Code](#step-4--open-a-terminal-inside-vs-code)
+7. [Step 5 - Create a virtual environment](#step-5--create-a-virtual-environment)
+8. [Step 6 - Activate the virtual environment](#step-6--activate-the-virtual-environment)
+9. [Step 7 - Install the project dependencies](#step-7--install-the-project-dependencies)
+10. [Step 8 - Get your API keys](#step-8--get-your-api-keys)
+11. [Step 9 - Create your `.env` file](#step-9--create-your-env-file)
+12. [Step 10 - Run the application](#step-10--run-the-application)
+13. [Step 11 - Use the app](#step-11--use-the-app)
 14. [Common Errors & Solutions](#common-errors--solutions)
 15. [How the app works (short technical overview)](#how-the-app-works-short-technical-overview)
 16. [Stopping the server / running it again later](#stopping-the-server--running-it-again-later)
@@ -38,20 +38,20 @@ step is explained, including what to type and what you should see.
 
 ## 1. What this app does
 
-- 🔎 **News search** — search any topic, or browse top headlines by category
+- 🔎 **News search** - search any topic, or browse top headlines by category
   (Technology, Business, Science, Health, Sports, Entertainment).
-- 🤖 **AI summaries** — get a bullet-point summary of any article.
-- 💡 **AI explains articles** — plain-language explanations with background
+- 🤖 **AI summaries** - get a bullet-point summary of any article.
+- 💡 **AI explains articles** - plain-language explanations with background
   and jargon defined, great for unfamiliar topics.
-- ⚖️ **AI compares articles** — select two articles and see how their
+- ⚖️ **AI compares articles** - select two articles and see how their
   coverage, framing, and facts differ.
-- 📊 **AI sentiment detection** — see whether an article's tone is positive,
+- 📊 **AI sentiment detection** - see whether an article's tone is positive,
   negative, neutral, or mixed, with a short explanation.
-- 💬 **AI answers your questions** — ask anything about the news you've
+- 💬 **AI answers your questions** - ask anything about the news you've
   searched for, or general questions, in a normal chat.
-- 🕘 **Conversation history** — your chat is remembered as you use the app.
-- ✨ **Suggested prompts** — quick-click suggestions to get you started.
-- 📱 **Responsive design** — works on desktop, tablet, and mobile screens.
+- 🕘 **Conversation history** - your chat is remembered as you use the app.
+- ✨ **Suggested prompts** - quick-click suggestions to get you started.
+- 📱 **Responsive design** - works on desktop, tablet, and mobile screens.
 
 ---
 
@@ -67,7 +67,7 @@ news-reader-ai/
 ├── news_service.py         # Talks to NewsAPI.org
 ├── requirements.txt        # List of Python packages this project needs
 ├── .env.example             # Template for your secret keys (safe to share)
-├── .env                     # YOUR real secret keys (you will create this — never share it)
+├── .env                     # YOUR real secret keys (you will create this - never share it)
 ├── .gitignore               # Tells Git which files to ignore
 ├── README.md                 # This file
 │
@@ -81,13 +81,13 @@ news-reader-ai/
         └── app.js            # Frontend logic (search, chat, buttons)
 ```
 
-You do not need to create any of these files by hand — they are already
+You do not need to create any of these files by hand - they are already
 included in the project. This section just helps you understand what each
 file is for.
 
 ---
 
-## Step 1 — Install Python
+## Step 1 - Install Python
 
 The app is written in Python, so your computer needs Python installed
 (version **3.9 or newer** is recommended).
@@ -95,7 +95,7 @@ The app is written in Python, so your computer needs Python installed
 ### Check if Python is already installed
 
 1. Open **Visual Studio Code**.
-2. Open a terminal inside VS Code: click the menu **Terminal → New Terminal**
+2. Open a terminal inside VS Code: click the menu **Terminal -> New Terminal**
    (or press `` Ctrl+` `` on Windows/Linux, `` Cmd+` `` on Mac).
 3. In the terminal, type:
 
@@ -109,11 +109,11 @@ The app is written in Python, so your computer needs Python installed
    python3 --version
    ```
 
-4. If you see something like `Python 3.11.4`, Python is already installed —
+4. If you see something like `Python 3.11.4`, Python is already installed -
    skip to [Step 2](#step-2--install-git-optional-but-recommended).
 
    If you see an error like `command not found` or `'python' is not
-   recognized`, you need to install Python — continue below.
+   recognized`, you need to install Python - continue below.
 
 ### Installing Python
 
@@ -124,7 +124,7 @@ The app is written in Python, so your computer needs Python installed
 3. Run the downloaded installer.
 4. ⚠️ **VERY IMPORTANT:** On the first installer screen, check the box that
    says **"Add python.exe to PATH"** at the bottom, *before* clicking
-   Install. This step is the #1 cause of problems for beginners — don't
+   Install. This step is the #1 cause of problems for beginners - don't
    skip it.
 5. Click **Install Now** and wait for it to finish.
 6. Close and reopen VS Code (fully quit, not just close the window) so it
@@ -159,7 +159,7 @@ python3 --version
 
 ---
 
-## Step 2 — Install Git (optional but recommended)
+## Step 2 - Install Git (optional but recommended)
 
 Git is only needed if you plan to download this project from a Git
 repository (e.g., GitHub) or want version control. If you already have the
@@ -182,13 +182,13 @@ If you see a version number, you're done. If not:
 
 ---
 
-## Step 3 — Get the project into VS Code
+## Step 3 - Get the project into VS Code
 
 You should already have a folder called **`news-reader-ai`** containing all
 the project files (this is what was generated for you). Open it in VS Code:
 
 1. Open **VS Code**.
-2. Go to **File → Open Folder...**
+2. Go to **File -> Open Folder...**
 3. Select the `news-reader-ai` folder.
 4. Click **Select Folder** (Windows/Linux) or **Open** (Mac).
 
@@ -197,7 +197,7 @@ in the Explorer panel on the left.
 
 ---
 
-## Step 4 — Open a terminal inside VS Code
+## Step 4 - Open a terminal inside VS Code
 
 All the remaining commands are typed into a terminal **inside VS Code**, so
 you don't need any other program.
@@ -205,7 +205,7 @@ you don't need any other program.
 1. Click **Terminal** in the top menu bar.
 2. Click **New Terminal**.
 3. A panel opens at the bottom of VS Code with a command prompt. Make sure
-   it opened in your project folder — it should show something like:
+   it opened in your project folder - it should show something like:
 
    ```
    PS C:\Users\YourName\news-reader-ai>
@@ -222,7 +222,7 @@ you don't need any other program.
 
 ---
 
-## Step 5 — Create a virtual environment
+## Step 5 - Create a virtual environment
 
 A **virtual environment** (or "venv") is an isolated folder that keeps this
 project's Python packages separate from everything else on your computer.
@@ -236,20 +236,20 @@ python -m venv venv
 ```
 
 This creates a new folder called `venv/` inside your project. Nothing
-visible will happen for a few seconds — that's normal. When it's done,
+visible will happen for a few seconds - that's normal. When it's done,
 you'll see a new `venv` folder appear in the Explorer panel on the left.
 
 > If `python` doesn't work, try `python3 -m venv venv`.
 
 ---
 
-## Step 6 — Activate the virtual environment
+## Step 6 - Activate the virtual environment
 
 You must "activate" the virtual environment every time you open a new
 terminal to work on this project. Activating it tells your terminal to use
 the isolated Python packages instead of your system-wide Python.
 
-**Windows (PowerShell — the default VS Code terminal):**
+**Windows (PowerShell - the default VS Code terminal):**
 
 ```powershell
 venv\Scripts\Activate.ps1
@@ -302,7 +302,7 @@ Type `Y` and press Enter if it asks for confirmation.
 
 ---
 
-## Step 7 — Install the project dependencies
+## Step 7 - Install the project dependencies
 
 With your virtual environment **activated** (you should see `(venv)` in the
 prompt), install all required Python packages with one command:
@@ -313,11 +313,11 @@ pip install -r requirements.txt
 
 This reads the `requirements.txt` file and installs:
 
-- **Flask** — the web framework that powers the app
-- **python-dotenv** — loads your secret keys from the `.env` file
-- **requests** — used to call the NewsAPI
-- **openai** — the official OpenAI Python SDK
-- **anthropic** — the official Anthropic (Claude) Python SDK
+- **Flask** - the web framework that powers the app
+- **python-dotenv** - loads your secret keys from the `.env` file
+- **requests** - used to call the NewsAPI
+- **openai** - the official OpenAI Python SDK
+- **anthropic** - the official Anthropic (Claude) Python SDK
 
 You should see a stream of text ending in something like:
 
@@ -329,12 +329,12 @@ This can take one to two minutes depending on your internet connection.
 
 ---
 
-## Step 8 — Get your API keys
+## Step 8 - Get your API keys
 
 This app needs **two** kinds of API keys:
 
-1. A **NewsAPI** key (always required) — used to fetch news articles.
-2. **Either** an **OpenAI** key **or** an **Anthropic (Claude)** key — used
+1. A **NewsAPI** key (always required) - used to fetch news articles.
+2. **Either** an **OpenAI** key **or** an **Anthropic (Claude)** key - used
    to power the AI features. You only need one of the two, not both.
 
 ### 8a. Get a free NewsAPI key
@@ -343,10 +343,10 @@ This app needs **two** kinds of API keys:
 2. Fill in the form and create a free account.
 3. After registering, your API key is shown on your account page (also
    available any time at [https://newsapi.org/account](https://newsapi.org/account)).
-4. Copy this key — you'll paste it into the `.env` file in the next step.
+4. Copy this key - you'll paste it into the `.env` file in the next step.
 
 > **Note:** NewsAPI's free "Developer" plan is for local development/testing
-> and has a limit on daily requests — that's perfectly fine for running this
+> and has a limit on daily requests - that's perfectly fine for running this
 > project.
 
 ### 8b. Get an OpenAI API key (option 1)
@@ -355,11 +355,11 @@ This app needs **two** kinds of API keys:
    and create an account (or log in).
 2. Go to [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 3. Click **Create new secret key**, give it a name, and copy the key
-   immediately — OpenAI only shows it once.
+   immediately - OpenAI only shows it once.
 4. You'll need billing set up on your OpenAI account for API calls to work
    (even small amounts of usage on this project cost only a few cents).
 
-### 8c. Get an Anthropic (Claude) API key (option 2 — alternative to OpenAI)
+### 8c. Get an Anthropic (Claude) API key (option 2 - alternative to OpenAI)
 
 1. Go to [https://console.anthropic.com/](https://console.anthropic.com/)
    and create an account (or log in).
@@ -367,11 +367,11 @@ This app needs **two** kinds of API keys:
 3. Copy the generated key.
 
 > You only need **one** of 8b or 8c. Pick whichever provider you have (or
-> want) an account with — the app supports both.
+> want) an account with - the app supports both.
 
 ---
 
-## Step 9 — Create your `.env` file
+## Step 9 - Create your `.env` file
 
 The `.env` file stores your secret API keys so they never get hard-coded
 into the source code (and are never uploaded to Git, thanks to
@@ -381,10 +381,10 @@ into the source code (and are never uploaded to Git, thanks to
 2. Right-click it and choose **Copy**, then right-click the folder and
    choose **Paste**. This creates a copy called `.env.example copy` or
    similar.
-3. Rename the copy to exactly: **`.env`** (no `.txt`, no extra characters —
+3. Rename the copy to exactly: **`.env`** (no `.txt`, no extra characters -
    just a file named `.env`).
 
-   *Alternative (faster) method — in the VS Code terminal:*
+   *Alternative (faster) method - in the VS Code terminal:*
 
    ```bash
    # Windows (PowerShell)
@@ -396,7 +396,7 @@ into the source code (and are never uploaded to Git, thanks to
 
 4. Open the new `.env` file in VS Code (click it in the Explorer panel) and
    fill in your real keys. It should look like this when you're done
-   (example values shown — use your own real keys):
+   (example values shown - use your own real keys):
 
    ```env
    AI_PROVIDER=openai
@@ -416,9 +416,9 @@ into the source code (and are never uploaded to Git, thanks to
 
    - Set `AI_PROVIDER` to `openai` if you got an OpenAI key, or `anthropic`
      if you got a Claude key.
-   - You only need to fill in the key that matches your chosen provider —
+   - You only need to fill in the key that matches your chosen provider -
      it's fine to leave the other one as the placeholder text.
-   - `FLASK_SECRET_KEY` can be any random string — mash your keyboard, it
+   - `FLASK_SECRET_KEY` can be any random string - mash your keyboard, it
      just needs to be non-empty and private.
 
 5. **Save the file** (`Ctrl+S` / `Cmd+S`).
@@ -429,7 +429,7 @@ into the source code (and are never uploaded to Git, thanks to
 
 ---
 
-## Step 10 — Run the application
+## Step 10 - Run the application
 
 With your virtual environment activated (`(venv)` visible in the terminal
 prompt) and your `.env` file filled in, start the Flask server:
@@ -453,10 +453,10 @@ This means the server is running successfully! 🎉
 
 ---
 
-## Step 11 — Use the app
+## Step 11 - Use the app
 
 1. Hold `Ctrl` (or `Cmd` on Mac) and click the `http://127.0.0.1:5000` link
-   in the terminal — or just open your web browser and go to:
+   in the terminal - or just open your web browser and go to:
 
    ```
    http://127.0.0.1:5000
@@ -492,30 +492,30 @@ This means the server is running successfully! 🎉
 | Page loads but styling looks broken / plain HTML | The Flask server isn't finding the `static/` folder, or files were moved | Make sure the folder structure matches [Project folder structure](#2-project-folder-structure) exactly, and that you're running `python app.py` from inside `news-reader-ai/` |
 | Chat says "AI provider request failed" | The AI API might be temporarily down, your key ran out of credits, or you're offline | Check your internet connection and your API usage/billing dashboard for the provider you're using |
 | Nothing happens when you click Search | The NewsAPI free plan may have hit its daily request limit, or there's a typo in the key | Wait for the daily limit to reset, or verify the key on [newsapi.org/account](https://newsapi.org/account) |
-| Terminal closed and you lost your `(venv)` session | This is normal — activation only lasts for the current terminal session | Just repeat [Step 6](#step-6--activate-the-virtual-environment) (`source venv/bin/activate` or the Windows equivalent) each time you open a new terminal |
+| Terminal closed and you lost your `(venv)` session | This is normal - activation only lasts for the current terminal session | Just repeat [Step 6](#step-6--activate-the-virtual-environment) (`source venv/bin/activate` or the Windows equivalent) each time you open a new terminal |
 
 ---
 
 ## How the app works (short technical overview)
 
 - **`app.py`** is the Flask application. It defines these routes:
-  - `GET /` — serves the chat page (`templates/index.html`)
-  - `POST /api/search` — fetches articles from NewsAPI (search or headlines)
-  - `POST /api/chat` — handles all AI actions: `chat`, `summarize`,
+  - `GET /` - serves the chat page (`templates/index.html`)
+  - `POST /api/search` - fetches articles from NewsAPI (search or headlines)
+  - `POST /api/chat` - handles all AI actions: `chat`, `summarize`,
     `explain`, `sentiment`, `compare`
-  - `GET /api/history` — returns the current conversation for this browser
-  - `POST /api/reset` — clears the conversation and fetched articles
+  - `GET /api/history` - returns the current conversation for this browser
+  - `POST /api/reset` - clears the conversation and fetched articles
 - **`news_service.py`** wraps NewsAPI's `/v2/everything` and
   `/v2/top-headlines` endpoints and normalizes the response.
 - **`ai_service.py`** builds prompts and calls either the OpenAI or
   Anthropic chat completion API, depending on `AI_PROVIDER` in your `.env`.
 - **`templates/index.html`**, **`static/css/style.css`**, and
-  **`static/js/app.js`** make up the frontend — a single-page chat UI with
+  **`static/js/app.js`** make up the frontend - a single-page chat UI with
   no build tools required, using `marked.js` (loaded from a CDN) to render
   the AI's Markdown-formatted replies.
 - Conversation history and fetched articles are stored **server-side, in
   memory**, keyed to a private session cookie set in your browser. This
-  keeps things simple for local development — restarting the server (or
+  keeps things simple for local development - restarting the server (or
   running on a different machine/host) will clear the history. For a
   production deployment you'd swap this for a real database, but that's
   outside the scope of this learning project.
@@ -528,7 +528,7 @@ This means the server is running successfully! 🎉
 `Ctrl+C`.
 
 **To run it again later** (e.g., after restarting your computer or
-reopening VS Code), you only need to repeat two steps — Python, the venv,
+reopening VS Code), you only need to repeat two steps - Python, the venv,
 and your dependencies are already set up:
 
 ```bash
@@ -550,11 +550,11 @@ Then open `http://127.0.0.1:5000` in your browser again.
 
 This project was generated as a learning/demo application. It uses:
 
-- [Flask](https://flask.palletsprojects.com/) — web framework
-- [NewsAPI](https://newsapi.org/) — news data
+- [Flask](https://flask.palletsprojects.com/) - web framework
+- [NewsAPI](https://newsapi.org/) - news data
 - [OpenAI API](https://platform.openai.com/docs) and/or
-  [Anthropic API](https://docs.anthropic.com/) — AI features
-- [marked.js](https://marked.js.org/) — Markdown rendering in the browser
+  [Anthropic API](https://docs.anthropic.com/) - AI features
+- [marked.js](https://marked.js.org/) - Markdown rendering in the browser
 
 Feel free to modify, extend, and use this project as a starting point for
 your own AI-powered applications.
