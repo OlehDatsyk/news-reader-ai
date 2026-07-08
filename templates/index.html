@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI News Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">📰</span>
+        <div>
+          <h1>AI News Assistant</h1>
+          <p class="tagline">Search, summarize &amp; understand the news</p>
+        </div>
+        <button id="closeSidebarBtn" class="icon-btn mobile-only" title="Close">✕</button>
+      </div>
+
+      <form id="searchForm" class="search-form">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search news (e.g. artificial intelligence)"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn primary" id="searchBtn">Search</button>
+      </form>
+
+      <div class="category-chips" id="categoryChips">
+        <button class="chip" data-category="general">🌍 Top</button>
+        <button class="chip" data-category="technology">💻 Tech</button>
+        <button class="chip" data-category="business">💼 Business</button>
+        <button class="chip" data-category="science">🔬 Science</button>
+        <button class="chip" data-category="health">🩺 Health</button>
+        <button class="chip" data-category="sports">🏅 Sports</button>
+        <button class="chip" data-category="entertainment">🎬 Entertainment</button>
+      </div>
+
+      <div class="results-header">
+        <span id="resultsLabel">Search for news to get started</span>
+      </div>
+
+      <div id="resultsList" class="results-list"></div>
+
+      <div class="compare-bar hidden" id="compareBar">
+        <span id="compareCount">0 selected</span>
+        <button class="btn small primary" id="compareBtn" disabled>Compare Selected</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ============ MAIN CHAT ============ -->
+    <main class="main">
+      <header class="main-header">
+        <button id="openSidebarBtn" class="icon-btn mobile-only" title="News search">☰</button>
+        <h2>Chat</h2>
+        <button id="resetBtn" class="btn small ghost" title="Start a new conversation">
+          🗑️ New conversation
+        </button>
+      </header>
+
+      <div id="chatWindow" class="chat-window">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">🤖</div>
+          <h3>Welcome to your AI News Assistant</h3>
+          <p>
+            Search for a topic on the left, then ask me to summarize, explain,
+            compare, or analyze the sentiment of any article — or just ask me
+            anything about the news.
+          </p>
+        </div>
+      </div>
+
+      <div class="suggested-prompts" id="suggestedPrompts"></div>
+
+      <form id="chatForm" class="chat-input-form">
+        <textarea
+          id="chatInput"
+          rows="1"
+          placeholder="Ask me anything about the news..."
+        ></textarea>
+        <button type="submit" class="btn primary send-btn" id="sendBtn" title="Send">➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

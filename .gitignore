@@ -1,0 +1,18 @@
+# Environment variables (contains secret API keys - never commit this)
+.env
+
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
