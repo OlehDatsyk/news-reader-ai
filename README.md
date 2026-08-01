@@ -62,23 +62,23 @@ Once everything is set up, your project folder will look like this:
 ```
 news-reader-ai/
 │
-├── app.py                 # Main Flask application (routes / API endpoints)
-├── ai_service.py           # Talks to OpenAI or Anthropic (Claude) API
-├── news_service.py         # Talks to NewsAPI.org
-├── requirements.txt        # List of Python packages this project needs
-├── .env.example             # Template for your secret keys (safe to share)
-├── .env                     # YOUR real secret keys (you will create this - never share it)
-├── .gitignore               # Tells Git which files to ignore
-├── README.md                 # This file
+├── app.py # Main Flask application (routes / API endpoints)
+├── ai_service.py # Talks to OpenAI or Anthropic (Claude) API
+├── news_service.py # Talks to NewsAPI.org
+├── requirements.txt # List of Python packages this project needs
+├── .env.example # Template for your secret keys (safe to share)
+├── .env # YOUR real secret keys (you will create this - never share it)
+├── .gitignore # Tells Git which files to ignore
+├── README.md # This file
 │
 ├── templates/
-│   └── index.html           # The single HTML page for the chat interface
+│   └── index.html # The single HTML page for the chat interface
 │
 └── static/
     ├── css/
-    │   └── style.css         # All the styling (modern dark chat UI)
+    │   └── style.css # All the styling (modern dark chat UI)
     └── js/
-        └── app.js            # Frontend logic (search, chat, buttons)
+        └── app.js # Frontend logic (search, chat, buttons)
 ```
 
 You do not need to create any of these files by hand - they are already
