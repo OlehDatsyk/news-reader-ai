@@ -8,9 +8,9 @@
 # double-clicked from.
 cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
 
-echo "============================================================"
-echo "  AI News Assistant - macOS Startup Script"
-echo "============================================================"
+echo "======================================================================"
+echo "  AI News Assistant - macOS Startup Script (Was made by Oleh Datsyk)"
+echo "======================================================================"
 echo
 
 # Keep the Terminal window open even if something below fails,
@@ -142,7 +142,7 @@ echo
 # ---------------------------------------------------------------
 echo "[6/6] Starting AI News Assistant..."
 echo
-echo "  Once you see \"Running on http://127.0.0.1:5000\" below,"
+echo "  Once you see \"Running on http://127.0.0.1:1010\" below,"
 echo "  open that address in your web browser."
 echo
 echo "  Press CTRL+C in this window to stop the server."

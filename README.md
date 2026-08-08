@@ -411,7 +411,7 @@ into the source code (and are never uploaded to Git, thanks to
 
    FLASK_SECRET_KEY=any-random-string-you-like-12345
    FLASK_DEBUG=True
-   PORT=5000
+   PORT=1010
    ```
 
    - Set `AI_PROVIDER` to `openai` if you got an OpenAI key, or `anthropic`
@@ -444,8 +444,8 @@ You should see output similar to this in the terminal:
  * Serving Flask app 'app'
  * Debug mode: on
  * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.1.23:5000
+ * Running on http://127.0.0.1:1010
+ * Running on http://192.168.1.23:1010
 Press CTRL+C to quit
 ```
 
@@ -455,11 +455,11 @@ This means the server is running successfully! 🎉
 
 ## Step 11 - Use the app
 
-1. Hold `Ctrl` (or `Cmd` on Mac) and click the `http://127.0.0.1:5000` link
+1. Hold `Ctrl` (or `Cmd` on Mac) and click the `http://127.0.0.1:1010` link
    in the terminal - or just open your web browser and go to:
 
    ```
-   http://127.0.0.1:5000
+   http://127.0.0.1:1010
    ```
 
 2. You should see the **AI News Assistant** chat interface load.
@@ -488,7 +488,7 @@ This means the server is running successfully! 🎉
 | `NEWS_API_KEY is not configured on the server` (shown in the app) | Your `.env` file is missing or the key wasn't filled in | Double-check the file is named exactly `.env` (not `.env.txt`) and that `NEWS_API_KEY=` has your real key with no quotes |
 | `No AI API key configured` (shown in the app) | Neither `OPENAI_API_KEY` nor `ANTHROPIC_API_KEY` is set | Fill in the key matching your `AI_PROVIDER` setting in `.env`, then restart the server |
 | `AuthenticationError` / `401` from OpenAI or Anthropic | The API key is invalid, expired, or has no billing set up | Regenerate the key on the provider's dashboard and make sure billing/credits are active on your account |
-| `Address already in use` / `Port 5000 is in use` | Another program (or another copy of this app) is already using port 5000 | Stop the other program, or change `PORT=5000` to `PORT=5050` in `.env` and restart, then visit `http://127.0.0.1:5050` |
+| `Address already in use` / `Port 1010 is in use` | Another program (or another copy of this app) is already using port 1010 | Stop the other program, or change `PORT=1010` to `PORT=5050` in `.env` and restart, then visit `http://127.0.0.1:5050` |
 | Page loads but styling looks broken / plain HTML | The Flask server isn't finding the `static/` folder, or files were moved | Make sure the folder structure matches [Project folder structure](#2-project-folder-structure) exactly, and that you're running `python app.py` from inside `news-reader-ai/` |
 | Chat says "AI provider request failed" | The AI API might be temporarily down, your key ran out of credits, or you're offline | Check your internet connection and your API usage/billing dashboard for the provider you're using |
 | Nothing happens when you click Search | The NewsAPI free plan may have hit its daily request limit, or there's a typo in the key | Wait for the daily limit to reset, or verify the key on [newsapi.org/account](https://newsapi.org/account) |
@@ -542,7 +542,7 @@ source venv/bin/activate
 python app.py
 ```
 
-Then open `http://127.0.0.1:5000` in your browser again.
+Then open `http://127.0.0.1:1010` in your browser again.
 
 ---
 

@@ -3,9 +3,9 @@ setlocal enabledelayedexpansion
 title AI News Assistant - Startup
 cd /d "%~dp0"
 
-echo ============================================================
-echo   AI News Assistant - Windows Startup Script
-echo ============================================================
+echo ========================================================================
+echo   AI News Assistant - Windows Startup Script (Was made by Oleh Datsyk)
+echo ========================================================================
 echo.
 
 REM ---------------------------------------------------------------
@@ -140,7 +140,7 @@ REM 6. Launch the application
 REM ---------------------------------------------------------------
 echo [6/6] Starting AI News Assistant...
 echo.
-echo   Once you see "Running on http://127.0.0.1:5000" below,
+echo   Once you see "Running on http://127.0.0.1:1010" below,
 echo   open that address in your web browser.
 echo.
 echo   Press CTRL+C in this window to stop the server.
