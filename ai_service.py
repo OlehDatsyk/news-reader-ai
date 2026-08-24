@@ -211,7 +211,7 @@ def chat_answer(history, articles, user_message):
     context_lines = []
     for a in articles:
         context_lines.append(
-            f"[{a.get('id')}] \"{a.get('title')}\" — {a.get('source')} "
+            f"[{a.get('id')}] \"{a.get('title')}\" - {a.get('source')} "
             f"({a.get('publishedAt', '')[:10]}): {a.get('description', '')[:180]}"
         )
     context_block = "\n".join(context_lines) if context_lines else "No articles fetched yet."

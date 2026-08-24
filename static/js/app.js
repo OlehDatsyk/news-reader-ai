@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AI News Assistant — Frontend logic
+   AI News Assistant - Frontend logic
    No build step, no frameworks: plain JS talking to the Flask API.
    ========================================================================== */
 
@@ -94,8 +94,8 @@
   }
 
   async function runSearch(payload) {
-    resultsList.innerHTML = `<div class="results-loading">Searching…</div>`;
-    resultsLabel.textContent = "Searching…";
+    resultsList.innerHTML = `<div class="results-loading">Searching...</div>`;
+    resultsLabel.textContent = "Searching...";
     try {
       const res = await fetch("/api/search", {
         method: "POST",
@@ -367,7 +367,7 @@
   }
 
   function truncate(str, n) {
-    return str && str.length > n ? str.slice(0, n - 1) + "…" : str;
+    return str && str.length > n ? str.slice(0, n - 1) + "..." : str;
   }
 
   // ==========================================================================

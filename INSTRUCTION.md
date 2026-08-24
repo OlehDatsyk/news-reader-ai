@@ -312,7 +312,7 @@ NEWS_API_KEY=your-real-newsapi-key-here
 
 FLASK_SECRET_KEY=any-random-string-you-make-up
 FLASK_DEBUG=True
-PORT=1010
+PORT=8000
 ```
 
 - Set `AI_PROVIDER` to whichever provider you got a key for (`openai` or
@@ -338,7 +338,7 @@ python app.py
 You should see something like:
 ```
 * Serving Flask app 'app'
-* Running on http://127.0.0.1:1010
+* Running on http://127.0.0.1:8000
 Press CTRL+C to quit
 ```
 
@@ -351,7 +351,7 @@ time you want to launch the app without typing commands - see
 
 ## 12. Test that everything works
 
-1. Open your browser and go to `http://127.0.0.1:1010`.
+1. Open your browser and go to `http://127.0.0.1:8000`.
 2. You should see the **AI News Assistant** chat interface.
 3. Type a topic like `electric vehicles` into the search box and click
    **Search**. Articles should appear in the sidebar within a couple of
@@ -412,7 +412,7 @@ staying open if something goes wrong so you can read the error.
 | `NEWS_API_KEY is not configured on the server` | `.env` is missing or the key is blank | Confirm the file is named exactly `.env` (not `.env.txt`), and `NEWS_API_KEY=` has your real key with no quotes |
 | `No AI API key configured` | Neither `OPENAI_API_KEY` nor `ANTHROPIC_API_KEY` is filled in | Fill in the key matching your `AI_PROVIDER`, then restart the app |
 | `AuthenticationError` / `401` | Invalid, expired, or unbilled API key | Regenerate the key on the provider's dashboard and confirm billing/credits are active |
-| `Address already in use` / port 1010 busy | Another program is using port 1010 | Stop it, or change `PORT=1010` to `PORT=5050` in `.env`, then visit `http://127.0.0.1:5050` |
+| `Address already in use` / port 8000 busy | Another program is using port 8000 | Stop it, or change `PORT=8000` to `PORT=5050` in `.env`, then visit `http://127.0.0.1:5050` |
 | Page loads with no styling | Server isn't finding `static/` | Confirm you're running `python app.py` from inside the `news-reader-ai` folder and the folder structure hasn't changed |
 | "AI provider request failed" in chat | Provider outage, expired key, or no internet | Check your connection and the provider's status/billing page |
 | Search returns nothing | NewsAPI daily limit hit, or a typo in the key | Wait for the daily reset, or verify the key at newsapi.org/account |
@@ -443,7 +443,7 @@ Yes, once per new terminal session - but the `Start App.bat` /
 
 **Can I run this on my phone?**
 The app itself only runs on a computer (it needs Python), but once it's
-running you can open `http://<your-computer's-local-IP>:1010` from a phone
+running you can open `http://<your-computer's-local-IP>:8000` from a phone
 on the same Wi-Fi network to view it in a mobile browser.
 
 **Will my chat history be saved if I restart the server?**

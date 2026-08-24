@@ -140,7 +140,7 @@ REM 6. Launch the application
 REM ---------------------------------------------------------------
 echo [6/6] Starting AI News Assistant...
 echo.
-echo   Once you see "Running on http://127.0.0.1:1010" below,
+echo   Once you see "Running on http://127.0.0.1:8000" below,
 echo   open that address in your web browser.
 echo.
 echo   Press CTRL+C in this window to stop the server.
